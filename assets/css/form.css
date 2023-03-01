@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap');
 
-*, body {
-    font-family: 'Poppins', sans-serif;
+
+.distinct {
+    height: 100%;
+    background-color: #000000d0;
+    /* overflow: hidden; */
+     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
@@ -9,14 +13,8 @@
     background-color: #000;
 }
 
-html, body {
-    height: 100%;
-    background-color: #000000d0;
-    /* overflow: hidden; */
-}
 
-
-.form-holder {
+.distinct .form-holder {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -26,7 +24,7 @@ html, body {
 
 }
 
-.form-holder .form-content {
+.distinct .form-holder .form-content {
     position: relative;
     text-align: center;
     display: -webkit-box;
@@ -41,7 +39,7 @@ html, body {
     padding: 4%;
 }
 
-.form-content .form-items {
+.distinct .form-content .form-items {
     border: 3px solid #fff;
     padding:3% 7%;
     display: inline-block;
@@ -56,7 +54,7 @@ html, body {
     max-height: 100vh;
 }
 
-.form-content h3 {
+.distinct .form-content h3 {
     color: #fff;
     text-align: left;
     font-size: 28px;
@@ -64,11 +62,11 @@ html, body {
     margin-bottom: 5px;
 }
 
-.form-content h3.form-title {
+.distinct .form-content h3.form-title {
     margin-bottom: 30px;
 }
 
-.form-content p {
+.distinct .form-content p {
     color: #fff;
     text-align: left;
     font-size: 17px;
@@ -78,11 +76,11 @@ html, body {
 }
 
 
-.form-content label, .was-validated .form-check-input:invalid~.form-check-label, .was-validated .form-check-input:valid~.form-check-label{
+.distinct .form-content label, .was-validated .form-check-input:invalid~.form-check-label, .was-validated .form-check-input:valid~.form-check-label{
     color: #fff;
 }
 
-.form-content input[type=text], .form-content input[type=password], .form-content input[type=email], .form-content select {
+.distinct .form-content input[type=text], .form-content input[type=password], .form-content input[type=email], .form-content select {
     width: 100%;
     padding: 9px 20px;
     text-align: left;
@@ -99,21 +97,21 @@ html, body {
 }
 
 
-.btn-primary{
+.distinct .btn-primary{
     background-color: #6C757D;
     outline: none;
     border: 0px;
      box-shadow: none;
 }
 
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active{
+.distinct .btn-primary:hover, .btn-primary:focus, .btn-primary:active{
     background-color: #495056;
     outline: none !important;
     border: none !important;
      box-shadow: none;
 }
 
-.form-content textarea {
+.distinct .form-content textarea {
     position: static !important;
     width: 100%;
     padding: 8px 20px;
@@ -132,26 +130,26 @@ html, body {
     margin-bottom: 14px;
 }
 
-.form-content textarea:hover, .form-content textarea:focus {
+.distinct .form-content textarea:hover, .form-content textarea:focus {
     border: 0;
     background-color: #ebeff8;
     color: #8D8D8D;
 }
 
-.mv-up{
+.distinct .mv-up{
     margin-top: -9px !important;
     margin-bottom: 8px !important;
 }
 
-.invalid-feedback{
+.distinct .invalid-feedback{
     color: #ff606e;
 }
 
-.valid-feedback{
+.distinct .valid-feedback{
    color: #2acc80;
 }
 
-.button {
+.distinct .button {
      appearance: button;
      backface-visibility: hidden;
      background-color: #ff0;
@@ -180,15 +178,15 @@ html, body {
      width: 100%;
 }
 
-.button:disabled {
+.distinct .button:disabled {
      cursor: default;
 }
 
-.button:focus {
+.distinct .button:focus {
      box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
 }
 
-.button:hover {
+.distinct .button:hover {
      background-color: #000;
      border: 2px solid #ff0;
      color: #ff0;
@@ -245,7 +243,7 @@ html, body {
     --fixed-width: 620px;
   }
 
-.form-iput {
+.distinct .form-iput {
   margin-bottom: 2%;
   margin-right: 4%;
 }
