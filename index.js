@@ -1,31 +1,40 @@
-const jsonfile = require("jsonfile");
+const fullName = document.querySelector('.fullname')
+const homeAddress = document.querySelector('.home-address')
+const email = document.querySelector('.email')
+const bio = document.querySelector('.bio')
+const form = document.querySelector('form')
+const submitBtn = document.querySelector('.button')
+const gender = document.querySelector('.gender')
+const employmentStatus = document.querySelector('.gender')
+const formFeedback = document.querySelector('.formFeedback')
 
-const moment = require("moment");
-const simpleGit = require("simple-git");
+// form submission
+submitBtn.addEventListener('click', (e) => {
+  e.preventDefault()
+ 
 
-const random = require("random");
-const FILE_PATH = "./data.json";
+  if (fullName.value === '' || email.value === '' || employmentStatus.value === '') {
+    formFeedback.innerHTML = "Please enter all required credentials";
+    form.reset();
+  } else {
+    formFeedback.innerHTML = "Sending email...";
+    fetch("https://formsubmit.co/ajax/isakawilly10@gmail.com", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: fullName.value,
+          Address: homeAddress.value,
+          email: email.value,
+          bio: bio.value,
+        })
+      })
+      .then(response => response.json())
+      .then(data => (formFeedback.innerHTML = data.message))
+      .catch(error => (formFeedback.innerHTML = error.message))
 
-const makeCommit = (n) => {
-  if (n === 0) return simpleGit().push();
-  const x = random.int(0, 54);
-  const y = random.int(0, 6);
-  const DATE = moment()
-    .subtract(1, "y")
-    .add(1, "d")
-    .add(x, "w")
-    .add(y, "d")
-    .format();
-  const data = {
-    date: DATE,
-  };
-  console.log(DATE);
-  jsonfile.writeFile(FILE_PATH, data, () => {
-    simpleGit()
-      .add([FILE_PATH])
-      .commit(DATE, { "--date": DATE }, makeCommit.bind(this, --n))
-      .push();
-  });
-};
-
-makeCommit(1200);
+    form.reset();
+  }
+})

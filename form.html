@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="assets/css/form.css" />
+</head>
+
+<body>
+  <div class="form-body">
+    <div class="row">
+      <div class="form-holder">
+        <div class="form-content">
+          <div class="form-items">
+            <h3>Become a ZenoHub Team Member
+            </h3>
+            <p>Fill out the form below to apply for membership and be part of our growing community..</p>
+            <p class="formFeedback"></p>
+            <form class="requires-validation" novalidate>
+              <div class="form-iput col-md-12">
+                <input class="form-control fullname" type="text" name="name" placeholder="Full Name" required />
+              </div>
+
+              <div class="form-iput col-md-12">
+                <input class="form-control email" type="email" name="email" placeholder="E-mail Address" required />
+              </div>
+
+              <div class="form-iput col-md-12">
+                <input class="form-control home-address" type="text" name="address"
+                  placeholder="home address e.g Dar es salaam, Ubungo" required />
+              </div>
+              <div class="form-iput col-md-12">
+                <textarea name="bio" id="" cols="30" rows="10"
+                  placeholder="Tell us more about yourself e.g., Area of expertise / years of experience / Current employment status / Github e.t.c"
+                  class="bio"></textarea>
+              </div>
+              <div class="col-md-12 mt-3">
+                <label class="mb-3 mr-1 gender" for="gender">Gender: </label>
+
+                <input type="radio" class="btn-check" name="gender" id="male" autocomplete="off" required />
+                <label class="btn btn-sm btn-outline-secondary" for="male">Male</label>
+
+                <input type="radio" class="btn-check" name="gender" id="female" autocomplete="off" required />
+                <label class="btn btn-sm btn-outline-secondary" for="female">Female</label>
+
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required />
+                <label class="form-check-label">I confirm that all data are correct</label>
+              </div>
+
+              <div class="form-button mt-3">
+                <button id="submit" type="submit" class="button">
+                  Register
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>
