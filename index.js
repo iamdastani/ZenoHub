@@ -18,7 +18,7 @@ submitBtn.addEventListener('click', (e) => {
     form.reset();
   } else {
     formFeedback.innerHTML = "Sending email...";
-    fetch("https://formsubmit.co/ajax/isakawilly10@gmail.com", {
+    fetch("https://formsubmit.co/ajax/join@zenohub.co.tz", {
         method: "POST",
         headers: {
           'Content-Type': 'application/json',
